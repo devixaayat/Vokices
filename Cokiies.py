@@ -40,7 +40,7 @@ def login():
 		'user-agent': ua})
 		with req.get(url) as response_body:
 			inspect=bs(response_body.text,'html.parser')
-			lsd_key=inspect.find('input',{'name':'lsd'})['value']
+			lsd_key=inspect.find('input',{'name':'lsd'})['value  ']
 			jazoest_key=inspect.find('input',{'name':'jazoest'})['value']
 			m_ts_key=inspect.find('input',{'name':'m_ts'})['value']
 			li_key=inspect.find('input',{'name':'li'})['value']
