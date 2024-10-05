@@ -40,13 +40,14 @@ def login():
 		'user-agent': ua})
 		with req.get(url) as response_body:
 			inspect=bs(response_body.text,'html.parser')
-			lsd_key=inspect.find('input',{'name':'lsd'})['value  ']
-			jazoest_key=inspect.find('input',{'name':'jazoest'})['value']
-			m_ts_key=inspect.find('input',{'name':'m_ts'})['value']
-			li_key=inspect.find('input',{'name':'li'})['value']
-			try_number_key=inspect.find('input',{'name':'try_number'})['value']
-			unrecognized_tries_key=inspect.find('input',{'name':'unrecognized_tries'})['value']
-			bi_xrwh_key=inspect.find('input',{'name':'bi_xrwh'})['value']
+			lsd_key=inspect.find('input',{'name':'lsd'})
+			jazoest_key=inspect.find('input',{'name':'jazoest'})
+	
+			m_ts_key=inspect.find('input',{'name':'m_ts'})
+			li_key=inspect.find('input',{'name':'li'})
+			try_number_key=inspect.find('input',{'name':'try_number'})
+			unrecognized_tries_key=inspect.find('input',{'name':'unrecognized_tries'})
+			bi_xrwh_key=inspect.find('input',{'name':'bi_xrwh'})
 			data={
 			'lsd':lsd_key,'jazoest':jazoest_key,
 			'm_ts':m_ts_key,'li':li_key,
